@@ -16,5 +16,18 @@ namespace СоБраТ_cbwb
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            ToolStripButton NewTab = new ToolStripButton("Новая вкладка");
+            NewTab.Click += NewTab_Click;
+            menu.Items.Add(NewTab);
+        }
+
+        private void NewTab_Click(object sender, EventArgs e)
+        {
+            TabFromSite taba = new TabFromSite(this.tabs);
+        }
     }
 }
